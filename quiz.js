@@ -171,10 +171,14 @@ function showResult(){
     quiz.innerHTML = `
         <h2>Quiz Finalizado!</h2>
         <p>Sua pontuação foi: ${score}/5</p>
+        <button id="restart-btn">Voltar ao início</button>
     `;
 
     nextButton.style.display = "none";
     timerBar.style.width = "0%";
-}
 
+    document.getElementById("restart-btn").addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+}
 startQuiz();
