@@ -88,12 +88,13 @@ function showQuestion(){
 }
 
 function startTimer(){
-    timeLeft = 100;
+    timeLeft = 200;
     timerBar.style.width = "100%";
 
     timer = setInterval(() => {
         timeLeft--;
-        timerBar.style.width = `${timeLeft}%`;
+
+        timerBar.style.width = `${(timeLeft / 200) * 100}%`;
 
         if(timeLeft <= 0){
             clearInterval(timer);
